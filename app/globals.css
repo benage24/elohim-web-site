@@ -17,14 +17,26 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
+.imageContainer {
+  position: relative;
+  width: 1000px; /* or the width of your images */
+  height: 760px; /* or the height of your images */
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 @layer utilities {
   .text-balance {
