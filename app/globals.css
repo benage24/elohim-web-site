@@ -65,3 +65,12 @@ svg{
       /* Blur the background image */
       backdrop-filter: blur(50px); /* Adjust the blur value as needed */
 }
+.bg-image-parralax{
+  /* The image used */
+  background-image: url('/cheese.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

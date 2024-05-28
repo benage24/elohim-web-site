@@ -1,11 +1,54 @@
+'use client';
+
+import { useState } from "react";
 import { productCard } from "../lib/definition";
 import Image from "next/image";
+
 export default function ProductCard(card:productCard){
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+ 
+    };
+  
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+   
+    };
+     // Check if card is defined and has the 'image' property
+  const containerStyle = { backgroundImage: `url(${card.image_url})` };
+
+ 
+    const dynamicColor = isHovered ? 'red' : 'blue';
     return(
         <>
-        
+        <div>
+            
+            <div className="relative shadow-sm " >
+ 
+  <div style={containerStyle} className="max-sm:w-[28.5rem]  p-4 mb-4 bg-cover bg-no-repeat  rounded-lg w-96 h-[34rem]" >
 
-<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  </div>
+
+  {/* <!-- Second card --> */}
+  <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`${isHovered?'  opacity-55':' opacity-15'} absolute top-0 left-0 bg-black p-4 w-96 h-[34rem] max-sm:w-[28.5rem]    rounded-lg opacity-15`}>
+
+  </div>
+  <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  className={` ${isHovered?' border border-[#fff] transition-opacity duration-300':' border-none'} space-y-10 absolute top-3 left-3  flex justify-center  flex-col items-center p-4 max-sm:w-[28.5rem]    pt-40 w-[22.2rem] h-[32.5rem]  rounded-lg`} >
+            {/* <span className={`text-7xl text-[#FAF1E3] font-bold ${isHovered ? 'text-[#FAF1E3] ' : ' text-[#FAF1E3] mt-60'}  `}>{card.icon}</span> */}
+            <p className={`text-3xl font-bold uppercase flex justify-center transition-opacity duration-300    ${isHovered ? 'text-white ' : ' text-white '}`}>- {card.title} -</p>
+            <p className= {` ${isHovered?'transition-opacity duration-300 ':'hidden'} text-white text-lg`}>
+              {/* {card.description} */}
+            </p>
+
+  </div>
+</div>
+
+
+        </div>
+
+{/* <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 <Image
       src={card.image_url}
       width={300}
@@ -25,46 +68,10 @@ export default function ProductCard(card:productCard){
             </svg>
         </a>
     </div>
-</div>
-
-
-{/* <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-<Image
-      src={card.image_url}
-      width={300}
-      height={460}
-      alt="Image 1"
-      className="p-0 rounded-t-lg"
-    />
-    <div className="px-5 pb-5">
-        <a href="#">
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{card.title}</h5>
-        </a>
-        <div className="flex items-center mt-2.5 mb-5">
-            <div className="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg className="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-            </div>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
-        </div>
-        <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">${card.price}</span>
-        </div>
-    </div>
 </div> */}
+
+
+
 
         </>
     )

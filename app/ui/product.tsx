@@ -1,6 +1,6 @@
-'use client';
-import { useState } from "react";
+import Image from "next/image";
 import ProductCard from "./product-card";
+
 export default function Product(){
     // const [cards,setCard]=useState([productList])
     const productList=
@@ -48,23 +48,75 @@ export default function Product(){
           />
         ))}
       </div>
-      {/* <!-- Parallax Section --> */}
-  <div className="parallax"></div>
+  
 
-  {/* <!-- Content Section --> */}
-  <div className="p-8 bg-white text-gray-900">
-    <h1 className="text-3xl font-bold mb-4">Content Section</h1>
-    <p className="text-lg mb-4">This is a content section that follows the parallax section. You can add more content here.</p>
-  </div>
 
-  {/* <!-- Another Parallax Section --> */}
-  <div className="parallax"></div>
 
   {/* <!-- More Content --> */}
-  <div className="p-8 bg-white text-gray-900">
+  {/* <div className="p-8 bg-white text-gray-900">
     <h2 className="text-2xl font-bold mb-4">More Content</h2>
     <p className="text-lg mb-4">This is another content section. You can add as many sections as you need.</p>
-  </div>
+  </div> */}
+
+  <div className="relative h-[45rem] max-sm:hidden mt-14 ">
+        {/* Red Background Section */}
+        <div className="absolute  w-full top-28">
+          <div className="relative h-[38rem] ">
+            {/* Parallax Effect Section */}
+            <div className="relative h-[38rem] overflow-hidden">
+              {/* Background Image for Parallax Effect */}
+              <div className="absolute inset-0 bg-fixed bg-image-parralax z-0"></div>
+
+              {/* Overlay for Parallax Effect */}
+              <div className="absolute inset-0 bg-[#2065AE] bg-opacity-35 z-1"></div>
+
+              {/* Content in the Parallax Section */}
+              <div className="relative z-2 flex flex-row space-x-10   p-4 items-center justify-center h-full text-white  font-bold">
+                {/* <div className=" flex justify-between space-x-2 ">
+                  <BiSolidCoffeeBean className=" text-[#C3A27C] mt-1  " />
+
+                  <p className=" text-[#C3A27C]   ">CUSTOMER TESTIMONIAL</p>
+                  <BiSolidCoffeeBean className=" text-[#C3A27C] mt-1  " />
+                </div>
+                <div>
+                  <p className=" text-5xl py-2">WHAT CUSTOMERS SAY?</p>
+                </div> */}
+
+                <div className=" text-white  w-1/2 h-96 bg-[#2065AE]  rounded shadow-md">
+                  erortpotr
+                </div>
+                <div className=" w-1/2 h-96 bg-white  o pacity-25 rounded shadow-md">
+
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="absolute top-6  flex w-full justify-center">
+          {/* Image */}
+          {/* <img
+            src="/cheese.png"
+            className="max-sm:w-[15rem] max-sm:h-[15rem] rounded-full"
+            alt="Flowbite Logo"
+          /> */}
+       <div className=" bg-white h-36 w-36 flex justify-center items-center rounded-full">
+        
+       <Image
+      src="/milk-carton-packs-P67QE86-504x1024.png"
+      width={70}
+      height={460}
+      alt="Image 2"
+      className="max-sm:w-[15rem] max-sm:h-[15rem] rounded-full"
+    />
+       </div>
+        </div>
+      </div>
+     
+
+
         </div>
     )
 

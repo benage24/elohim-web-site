@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function (){
+export  default  function Jumbotron (){
     return(
         <>
         
@@ -48,36 +48,38 @@ export default function (){
         </div>
     </div>
 </section> */}
-<div className=" bg-[#2065AE] h-2/3">
+<div className=" bg-[#2065AE] h-2/3 pt-8">
 
 <div className=" flex justify-center">
 <div className="py-8 px-4 justify-center flex  mx-auto max-w-screen-xl w-1/2  text-center lg:py-16">
      
-     {/* <div className="relative w-[1000px] h-[60px]">
+    
+  <div className=" relative rounded-full  w-96 h-96 items-center flex justify-center bg-[#fff]">
+    <div className=" absolute top-0 left-0">
+    <div className="relative w-[1000px] h-[60px]">
     <Image
       src="/milk-splash-isolated-on-black-background-JW8ZPTS.png"
-      width={300}
+      width={450}
       height={460}
       alt="Image 1"
       className="absolute top-0 left-0"
     />
     <Image
-      src="/milk2-carton-packs-P67QE86-504x1024.png"
-      width={200}
+      src="/milk-carton-packs-P67QE86-504x1024.png"
+      width={170}
       height={460}
       alt="Image 2"
-      className="absolute top-0 left-20"
+      className="absolute top-5 left-20"
     />
      <Image
       src="/milk2-carton-packs-P67QE86-504x1024.png"
-      width={200}
+      width={150}
       height={460}
       alt="Image 2"
-      className="absolute top-0 left-28"
+      className="absolute top-8 left-52"
     />
-  </div> */}
-  <div className=" rounded-full  w-96 h-96 items-center flex justify-center bg-red-600">
-        <p className=" text-3xl text-white font-bold uppercase">Some image here</p>
+  </div>
+    </div>
   </div>
 
   </div>
