@@ -2,6 +2,7 @@ import Image from "next/image";
 import NavBar from "./ui/navbar";
 import Jumbotron from "./ui/jumbotron";
 import AboutUs from "./ui/about-us";
+import Product from "./ui/product";
 
 export default function Home() {
     return(
@@ -11,7 +12,10 @@ export default function Home() {
       <Jumbotron />
       </div>
       <AboutUs />
-
+   
+      <div className="">
+      <Product/>
+      </div>
       </>
     )
 }
