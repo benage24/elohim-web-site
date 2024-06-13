@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+    background-color: #fff;
 }
 .imageContainer {
   position: relative;
@@ -73,4 +74,18 @@ svg{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.jumbotron-bg-image{
+  background-image: url('/cover.png');
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron{
+  background-image: url('/cover.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

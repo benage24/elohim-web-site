@@ -31,9 +31,9 @@ export default function Product(){
     return(
         < div className=" bg-[#F7F7F7">
              <div className=" flex justify-center mt-20 space-x-6 ">
-                <hr className=" w-16 mt-4 border-[#2065AE]  border-4" />
-                <p className=" text-2xl mt-1 font-bold text-[#2065AE]">Shop</p>
-                <hr className=" w-16 mt-4 border-[#2065AE]  border-4" />
+                <hr className=" w-16 mt-4 border-red-600  border-4" />
+                <p className=" text-2xl mt-1 font-bold text-red-600">Shop</p>
+                <hr className=" w-16 mt-4 border-red-600   border-4" />
                 </div>
         <p className=" font-bold text-5xl my-6 p-8 justify-center flex">Nos produits</p>
         <div className="flex justify-center space-x-14">
@@ -68,7 +68,7 @@ export default function Product(){
               <div className="absolute inset-0 bg-fixed bg-image-parralax z-0"></div>
 
               {/* Overlay for Parallax Effect */}
-              <div className="absolute inset-0 bg-[#2065AE] bg-opacity-35 z-1"></div>
+              <div className="absolute inset-0 bg-[#000] bg-opacity-35 z-1"></div>
 
               {/* Content in the Parallax Section */}
               <div className="relative z-2 flex flex-row space-x-10   p-4 items-center justify-center h-full text-white  font-bold">
@@ -82,7 +82,7 @@ export default function Product(){
                   <p className=" text-5xl py-2">WHAT CUSTOMERS SAY?</p>
                 </div> */}
 
-                <div className=" text-white  w-1/2 h-96 bg-[#2065AE]  rounded shadow-md">
+                <div className=" text-white  w-1/2 h-96 bg-red-600  rounded shadow-md">
                   erortpotr
                 </div>
                 <div className=" w-1/2 h-96 bg-white  o pacity-25 rounded shadow-md">
